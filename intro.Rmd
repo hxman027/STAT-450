@@ -1,5 +1,5 @@
 ---
-title: "stat 450 html intro"
+title: "STAT 450 HTML Intro Assignment"
 output: html_document
 ---
 
@@ -10,25 +10,31 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Introduction 
-About Harry: Harry is a 4th year Stats Major and Commerce Minro Student at UBC. He likes sports a lot and he goes to the gym often. He is taking Stat 450 this year. Today Harry did some knitting and he thinks it's okay. His friends also helped him knit with different tools.
+About Harry Xu: Harry is a 4th year Stats Major and Commerce Minor Student at UBC. He likes sports a lot and he goes to the gym often. He recently got into snowboarding and longboarding. He is taking Stat 450 this year and he is very excited to work on a case for a client. Today in the seminar, Jan 11th 2018, Harry did some knitting and he thinks it's pretty cool. His friends also helped him knit with different tools.
 
 ## Favourite Equation: 
 My favourite equation is: $1^2+2^2+3^2 +.... + n^2 = \frac{(n+1)(n+2)(2n+1)}{6}$ This equation is one of the fundemental equations used in Calculus.
 
 ## Favourite Dataset:
 
-My favourite Dataset: is the S&P500 dataset with 
+My favourite Dataset: is the S&P500 dataset dated back since Jan of 1871, which I downloaded online. Here is the first 5 rows of the dataset. 
 
 ``` {r, echo = FALSE}
 
-setwd("~/Desktop/")
-library(tseries)
-library(zoo)
 SP500 <- read.csv("data_csv.csv")
-timeseries <- ts(data = SP500$Real.Price)
-plot.ts(timeseries)
+head(SP500, n =5)
+``` 
+### 
+##
+# 
+####Here is the graph showing the S&P500 Real Price vs. Time:
 
-
+``` {r, echo = FALSE}
+# library(tseries)
+# library(zoo)
+# timeseries <- ts(data = SP500$Real.Price)
+# plot(timeseries)
+plot(SP500$Date, SP500$Real.Price, xlab = "Time", ylab = "Real Price", main = "S&P500")
 ```
 
 
